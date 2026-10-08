@@ -7,7 +7,6 @@ import time
 IMAGE_SIZE = 256
 TOTAL_EXPECTED = int(IMAGE_SIZE * IMAGE_SIZE)
 
-# Citanje sa FPGA 
 ser = serial.Serial('COM7', 115200)
 ser.reset_input_buffer()
 

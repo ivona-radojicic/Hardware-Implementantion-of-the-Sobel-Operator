@@ -1,0 +1,385 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Oct  8 19:11:08 2026
+# Process ID: 9084
+# Current directory: C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.runs/synth_1
+# Command line: vivado.exe -log magnitude_gradient.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source magnitude_gradient.tcl
+# Log file: C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.runs/synth_1/magnitude_gradient.vds
+# Journal file: C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.runs/synth_1\vivado.jou
+# Running On        :racopc
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26200
+# Processor Detail  :11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+# CPU Frequency     :2419 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :16905 MB
+# Swap memory       :9663 MB
+# Total Virtual     :26569 MB
+# Available Virtual :9814 MB
+#-----------------------------------------------------------
+source magnitude_gradient.tcl -notrace
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 491.191 ; gain = 201.234
+Command: synth_design -top magnitude_gradient -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Device 21-9227] Part: xc7z020clg400-1 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1152
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1372.926 ; gain = 450.062
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'magnitude_gradient' [C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.srcs/sources_1/new/magnitude_gradient.vhd:17]
+INFO: [Synth 8-638] synthesizing module 'im_ram' [C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.srcs/sources_1/new/im_ram.vhd:27]
+	Parameter G_RAM_WIDTH bound to: 8 - type: integer 
+	Parameter G_RAM_DEPTH bound to: 65536 - type: integer 
+	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string 
+INFO: [Synth 8-256] done synthesizing module 'im_ram' (0#1) [C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.srcs/sources_1/new/im_ram.vhd:27]
+INFO: [Synth 8-3491] module 'line_buffer' declared at 'C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.srcs/sources_1/new/line_buffer.vhd:6' bound to instance 'LINE_BUFFER_IMPL1' of component 'line_buffer' [C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.srcs/sources_1/new/magnitude_gradient.vhd:139]
+INFO: [Synth 8-638] synthesizing module 'line_buffer' [C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.srcs/sources_1/new/line_buffer.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'line_buffer' (0#1) [C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.srcs/sources_1/new/line_buffer.vhd:15]
+INFO: [Synth 8-3491] module 'line_buffer' declared at 'C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.srcs/sources_1/new/line_buffer.vhd:6' bound to instance 'LINE_BUFFER_IMPL2' of component 'line_buffer' [C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.srcs/sources_1/new/magnitude_gradient.vhd:140]
+INFO: [Synth 8-638] synthesizing module 'sqrt_pipelined' [C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.srcs/sources_1/new/sqrt_pipelined.vhd:24]
+	Parameter G_IN_BW bound to: 16 - type: integer 
+	Parameter G_OUT_BW bound to: 16 - type: integer 
+	Parameter G_OUT_FRAC bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'sqrt_pipelined' (0#1) [C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.srcs/sources_1/new/sqrt_pipelined.vhd:24]
+INFO: [Synth 8-638] synthesizing module 'edge_detector' [C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.srcs/sources_1/new/edge_detector.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'edge_detector' (0#1) [C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.srcs/sources_1/new/edge_detector.vhd:15]
+INFO: [Synth 8-638] synthesizing module 'uart_tx' [C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.srcs/sources_1/new/uart_tx.vhd:27]
+	Parameter CLK_FREQ bound to: 125 - type: integer 
+	Parameter SER_FREQ bound to: 115200 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'uart_tx' (0#1) [C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.srcs/sources_1/new/uart_tx.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'magnitude_gradient' (0#1) [C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.srcs/sources_1/new/magnitude_gradient.vhd:17]
+WARNING: [Synth 8-6014] Unused sequential element gen_pipeline[15].rem_pipe_reg[16] was removed.  [C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.srcs/sources_1/new/sqrt_pipelined.vhd:74]
+WARNING: [Synth 8-6014] Unused sequential element gen_pipeline[15].idx_pipe_reg[16] was removed.  [C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.srcs/sources_1/new/sqrt_pipelined.vhd:76]
+WARNING: [Synth 8-6014] Unused sequential element gen_pipeline[15].ukupni_parovi_pipe_reg[16] was removed.  [C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.srcs/sources_1/new/sqrt_pipelined.vhd:77]
+WARNING: [Synth 8-7129] Port reset in module line_buffer is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1717.762 ; gain = 794.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1717.762 ; gain = 794.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1717.762 ; gain = 794.898
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1717.762 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.srcs/constrs_1/new/arty_constr.xdc]
+Finished Parsing XDC File [C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.srcs/constrs_1/new/arty_constr.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.srcs/constrs_1/new/arty_constr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/magnitude_gradient_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/magnitude_gradient_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1759.941 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1759.941 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1759.941 ; gain = 837.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1759.941 ; gain = 837.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1759.941 ; gain = 837.078
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'reg_state_reg' in module 'edge_detector'
+INFO: [Synth 8-802] inferred FSM for state register 'tx_fsm_reg' in module 'uart_tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  stidle |                               00 |                               00
+                  stsend |                               01 |                               01
+                  stedge |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'reg_state_reg' using encoding 'sequential' in module 'edge_detector'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+                    data |                              001 |                              001
+                  parity |                              010 |                              010
+                   stop1 |                              011 |                              011
+                   stop2 |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'tx_fsm_reg' using encoding 'sequential' in module 'uart_tx'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1759.941 ; gain = 837.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   16 Bit       Adders := 34    
+	   2 Input   11 Bit       Adders := 1     
+	   3 Input    9 Bit       Adders := 4     
+	   2 Input    6 Bit       Adders := 31    
+	   2 Input    3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               34 Bit    Registers := 16    
+	               32 Bit    Registers := 16    
+	               22 Bit    Registers := 1     
+	               20 Bit    Registers := 1     
+	               16 Bit    Registers := 22    
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 524   
+	                6 Bit    Registers := 16    
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 30    
++---RAMs : 
+	             512K Bit	(65536 X 8 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 4     
+	   5 Input    8 Bit        Muxes := 1     
+	   3 Input    6 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   5 Input    3 Bit        Muxes := 2     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 24    
+	   3 Input    1 Bit        Muxes := 1     
+	   5 Input    1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP qdr_grad_H_reg, operation Mode is: (A2*B2)'.
+DSP Report: register grad_H_reg is absorbed into DSP qdr_grad_H_reg.
+DSP Report: register grad_H_reg is absorbed into DSP qdr_grad_H_reg.
+DSP Report: register qdr_grad_H_reg is absorbed into DSP qdr_grad_H_reg.
+DSP Report: operator qdr_grad_H0 is absorbed into DSP qdr_grad_H_reg.
+DSP Report: Generating DSP sum_reg, operation Mode is: (PCIN+(A2*B2)')'.
+DSP Report: register grad_V_reg is absorbed into DSP sum_reg.
+DSP Report: register grad_V_reg is absorbed into DSP sum_reg.
+DSP Report: register sum_reg is absorbed into DSP sum_reg.
+DSP Report: register qdr_grad_V_reg is absorbed into DSP sum_reg.
+DSP Report: operator sum0 is absorbed into DSP sum_reg.
+DSP Report: operator qdr_grad_V0 is absorbed into DSP sum_reg.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 1759.941 ; gain = 837.078
+---------------------------------------------------------------------------------
+ Sort Area is  qdr_grad_H_reg_0 : 0 0 : 954 1987 : Used 1 time 0
+ Sort Area is  qdr_grad_H_reg_0 : 0 1 : 1033 1987 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++-------------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name        | RTL Object          | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|magnitude_gradient | IM_MEM/ram_name_reg | 64 K x 8(READ_FIRST)   | W |   | 64 K x 8(WRITE_FIRST)  |   | R | Port A and B     | 0      | 16     | 
++-------------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++-------------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name        | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|magnitude_gradient | (A2*B2)'         | 11     | 11     | -      | -      | 22     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|magnitude_gradient | (PCIN+(A2*B2)')' | 11     | 11     | -      | -      | 20     | 1    | 1    | -    | -    | -     | 1    | 1    | 
++-------------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 1759.941 ; gain = 837.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:00:57 . Memory (MB): peak = 1759.941 ; gain = 837.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++-------------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name        | RTL Object          | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|magnitude_gradient | IM_MEM/ram_name_reg | 64 K x 8(READ_FIRST)   | W |   | 64 K x 8(WRITE_FIRST)  |   | R | Port A and B     | 0      | 16     | 
++-------------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 1759.941 ; gain = 837.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:59 ; elapsed = 00:01:02 . Memory (MB): peak = 1759.941 ; gain = 837.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:59 ; elapsed = 00:01:02 . Memory (MB): peak = 1759.941 ; gain = 837.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:59 ; elapsed = 00:01:02 . Memory (MB): peak = 1759.941 ; gain = 837.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:59 ; elapsed = 00:01:02 . Memory (MB): peak = 1759.941 ; gain = 837.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:59 ; elapsed = 00:01:02 . Memory (MB): peak = 1759.941 ; gain = 837.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:59 ; elapsed = 00:01:02 . Memory (MB): peak = 1759.941 ; gain = 837.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++-------------------+---------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name        | RTL Name                              | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-------------------+---------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|magnitude_gradient | LINE_BUFFER_IMPL1/output_pixel_reg[7] | 254    | 8     | NO           | NO                 | YES               | 0      | 64      | 
+|magnitude_gradient | LINE_BUFFER_IMPL2/output_pixel_reg[7] | 254    | 8     | NO           | NO                 | YES               | 0      | 64      | 
++-------------------+---------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-------------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name        | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|magnitude_gradient | (A'*B')'         | 30     | 18     | -      | -      | 0      | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|magnitude_gradient | (PCIN+(A'*B')')' | 30     | 18     | -      | -      | 20     | 1    | 1    | -    | -    | -     | 1    | 1    | 
++-------------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |   131|
+|3     |DSP48E1  |     2|
+|5     |LUT1     |    87|
+|6     |LUT2     |   455|
+|7     |LUT3     |    84|
+|8     |LUT4     |    87|
+|9     |LUT5     |    42|
+|10    |LUT6     |    92|
+|11    |MUXF7    |    12|
+|12    |RAMB36E1 |    16|
+|28    |SRLC32E  |   128|
+|29    |FDRE     |   701|
+|30    |FDSE     |     1|
+|31    |IBUF     |     3|
+|32    |OBUF     |     1|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:59 ; elapsed = 00:01:02 . Memory (MB): peak = 1759.941 ; gain = 837.078
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:59 . Memory (MB): peak = 1759.941 ; gain = 794.898
+Synthesis Optimization Complete : Time (s): cpu = 00:00:59 ; elapsed = 00:01:03 . Memory (MB): peak = 1759.941 ; gain = 837.078
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1759.941 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 161 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1759.941 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: d6afc82e
+INFO: [Common 17-83] Releasing license: Synthesis
+34 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:08 ; elapsed = 00:01:26 . Memory (MB): peak = 1759.941 ; gain = 1268.750
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1759.941 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.runs/synth_1/magnitude_gradient.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file magnitude_gradient_utilization_synth.rpt -pb magnitude_gradient_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Oct  8 19:12:47 2026...

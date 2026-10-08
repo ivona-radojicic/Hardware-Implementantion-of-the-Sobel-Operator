@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Oct  8 19:13:02 2026
+# Process ID: 15280
+# Current directory: C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.runs/impl_1
+# Command line: vivado.exe -log magnitude_gradient.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source magnitude_gradient.tcl -notrace
+# Log file: C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.runs/impl_1/magnitude_gradient.vdi
+# Journal file: C:/Users/radoj/Documents/Hardware_Implementation_of_the_Sobel_Operator/Hardware_Implementation_of_the_Sobel_Operator.runs/impl_1\vivado.jou
+# Running On        :racopc
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26200
+# Processor Detail  :11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+# CPU Frequency     :2419 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :16905 MB
+# Swap memory       :9663 MB
+# Total Virtual     :26569 MB
+# Available Virtual :9760 MB
+#-----------------------------------------------------------
+source magnitude_gradient.tcl -notrace

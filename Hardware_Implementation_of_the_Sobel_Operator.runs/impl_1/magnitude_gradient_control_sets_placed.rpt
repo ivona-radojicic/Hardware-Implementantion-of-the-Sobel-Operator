@@ -1,0 +1,111 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Thu Oct  8 19:13:59 2026
+| Host         : racopc running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file magnitude_gradient_control_sets_placed.rpt
+| Design       : magnitude_gradient
+| Device       : xc7z020
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    33 |
+|    Minimum number of control sets                        |    33 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    74 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    33 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |    14 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     1 |
+| >= 16              |    12 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              70 |           40 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             163 |           49 |
+| Yes          | No                    | No                     |              88 |           33 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             381 |          133 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+------------------------------------------+-------------------------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |               Enable Signal              |                 Set/Reset Signal                | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+------------------------------------------+-------------------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | UART_MAP/tx_clk_en_reg_n_0               |                                                 |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | SQRT_MAP/valid_pipe[1]                   | SQRT_MAP/gen_pipeline[1].idx_pipe[2][5]_i_1_n_0 |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG | SQRT_MAP/valid_pipe[6]                   | SQRT_MAP/gen_pipeline[6].idx_pipe[7][4]_i_1_n_0 |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG |                                          | UART_MAP/FSM_sequential_tx_fsm[2]_i_1_n_0       |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | SQRT_MAP/valid_pipe[4]                   | SQRT_MAP/gen_pipeline[4].idx_pipe[5][5]_i_1_n_0 |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | SQRT_MAP/valid_pipe[2]                   | SQRT_MAP/gen_pipeline[2].idx_pipe[3][5]_i_1_n_0 |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG | SQRT_MAP/valid_pipe[3]                   | SQRT_MAP/gen_pipeline[3].idx_pipe[4][5]_i_1_n_0 |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | SQRT_MAP/valid_pipe[5]                   | SQRT_MAP/gen_pipeline[5].idx_pipe[6][5]_i_1_n_0 |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | SQRT_MAP/valid_pipe[10]                  | reset_IBUF                                      |                5 |              7 |         1.40 |
+|  clk_IBUF_BUFG | SQRT_MAP/gen_pipeline[14].valid_pipe_reg | reset_IBUF                                      |                7 |              7 |         1.00 |
+|  clk_IBUF_BUFG | SQRT_MAP/valid_pipe[12]                  | reset_IBUF                                      |                5 |              7 |         1.40 |
+|  clk_IBUF_BUFG | SQRT_MAP/valid_pipe[11]                  | reset_IBUF                                      |                5 |              7 |         1.40 |
+|  clk_IBUF_BUFG | SQRT_MAP/valid_pipe[13]                  | reset_IBUF                                      |                6 |              7 |         1.17 |
+|  clk_IBUF_BUFG | SQRT_MAP/valid_pipe[7]                   | reset_IBUF                                      |                3 |              7 |         2.33 |
+|  clk_IBUF_BUFG | SQRT_MAP/valid_pipe[8]                   | reset_IBUF                                      |                3 |              7 |         2.33 |
+|  clk_IBUF_BUFG | SQRT_MAP/valid_pipe[14]                  | reset_IBUF                                      |                6 |              7 |         1.17 |
+|  clk_IBUF_BUFG | SQRT_MAP/valid_pipe[9]                   | reset_IBUF                                      |                3 |              7 |         2.33 |
+|  clk_IBUF_BUFG | UART_MAP/E[0]                            |                                                 |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | UART_MAP/tx_data_tmp[7]_i_1_n_0          | UART_MAP/FSM_sequential_tx_fsm[2]_i_1_n_0       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG |                                          | UART_MAP/tx_clk_cnt[10]_i_1_n_0                 |                4 |             11 |         2.75 |
+|  clk_IBUF_BUFG | sqrt_valid                               | reset_IBUF                                      |                4 |             15 |         3.75 |
+|  clk_IBUF_BUFG | EDGE_MAP/E[0]                            | reset_IBUF                                      |                3 |             16 |         5.33 |
+|  clk_IBUF_BUFG | SQRT_MAP/wea0                            |                                                 |               12 |             23 |         1.92 |
+|  clk_IBUF_BUFG | p_3_in                                   | reset_IBUF                                      |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG | SQRT_MAP/valid_pipe[1]                   | reset_IBUF                                      |                9 |             33 |         3.67 |
+|  clk_IBUF_BUFG | SQRT_MAP/valid_pipe[2]                   | reset_IBUF                                      |               10 |             34 |         3.40 |
+|  clk_IBUF_BUFG | SQRT_MAP/valid_pipe[3]                   | reset_IBUF                                      |                9 |             35 |         3.89 |
+|  clk_IBUF_BUFG | SQRT_MAP/valid_pipe[4]                   | reset_IBUF                                      |               10 |             36 |         3.60 |
+|  clk_IBUF_BUFG | SQRT_MAP/valid_pipe[5]                   | reset_IBUF                                      |                9 |             37 |         4.11 |
+|  clk_IBUF_BUFG | SQRT_MAP/valid_pipe[6]                   | reset_IBUF                                      |                9 |             38 |         4.22 |
+|  clk_IBUF_BUFG | reg0                                     |                                                 |               16 |             56 |         3.50 |
+|  clk_IBUF_BUFG |                                          | reset_IBUF                                      |               43 |            146 |         3.40 |
+|  clk_IBUF_BUFG |                                          |                                                 |               56 |            198 |         3.54 |
++----------------+------------------------------------------+-------------------------------------------------+------------------+----------------+--------------+
+
+

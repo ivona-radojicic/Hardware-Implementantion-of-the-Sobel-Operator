@@ -20,20 +20,19 @@ while len(data_buffer) < TOTAL_EXPECTED:
         data_buffer.extend(chunk)
         print(f"Učitano: {len(data_buffer)} / {TOTAL_EXPECTED} bajtova", end='\r')
     else:
-        if len(data_buffer) > 0: # Ako je počelo slanje, a stalo, mali break
+        if len(data_buffer) > 0: 
             time.sleep(0.01)
-        if len(data_buffer) == 0: # Čeka da uopšte krene prenos
+        if len(data_buffer) == 0: 
             continue
 
-# Unpack u numpy niz
+
 pixelVals = struct.unpack(f'<{TOTAL_EXPECTED}B', data_buffer)
 fpgaIm = np.reshape(np.array(pixelVals), [IMAGE_SIZE, IMAGE_SIZE]).astype(np.uint8)
 ser.close()
 
-# Cela matrica u tekstualnom fajlu
+
 np.savetxt("matrica_piksela.txt", fpgaIm, fmt='%d')
 
-# Softverski model i poredjenje
 swInput = plt.imread('cameraman.bmp')
 
 
@@ -52,7 +51,6 @@ def software_sobel(image):
 
 swIm = software_sobel(swInput)
 
-# Poravnanje i Normalizacija za prikaz
 fpga_trimmed = fpgaIm[1:255, 1:255]
 def norm(img):
     if np.max(img) == 0: return img
@@ -61,7 +59,6 @@ def norm(img):
 fpga_final = norm(fpga_trimmed)
 sw_final = norm(swIm)
 
-# Računanje Srednje Apsolutne Razlike 
 razlika = np.abs(sw_final.astype(np.int16) - fpga_final.astype(np.int16))
 
 
